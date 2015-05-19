@@ -4,6 +4,7 @@
 ## computing time and resources.
 
 ## This function creates a matrix object that can cache its inverse.
+
 makeCacheMatrix <- function(x = matrix()) {
     # This function creates a special "matrix" object that can cache its inverse.
     #
@@ -12,23 +13,25 @@ makeCacheMatrix <- function(x = matrix()) {
     #   
     # Returns:
     #   A list of functions to access and store the inverse of the matrix
-    #   
-    
+
     s <- NULL
     set <- function(y) {
         x <<- y
         s <<- NULL
     }
     #get <- function() x
-    get <- function(){            #Alternative writing for easier reading
+    # Alternative writing for easier reading
+    get <- function(){            
         x
     }
     #setsolve <- function(solve) s <<- solve
-    setsolve <- function(solve){  #Alternative writing for easier reading
+    #Alternative writing for easier reading
+    setsolve <- function(solve){ 
         s <<- solve
     }
     #getsolve <- function() s
-    getsolve <- function(){       #Alternative writing for easier reading
+    #Alternative writing for easier reading
+    getsolve <- function(){       
         s
     }
     # Return a list of the functions available
